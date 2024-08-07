@@ -37,9 +37,12 @@ const SearchBar = ({ placeholder }: { placeholder?: string }) => {
       {
         <div
           style={{
-            scale: searchInput ? 1 : 0.9,
+            scale: searchInput ? 1 : 0,
             opacity: searchInput ? 1 : 0,
-            transition: "all 0.2s",
+            top: searchInput ? "100%" : "-100%",
+            left: searchInput ? "50%" : "-50%",
+            // display: searchInput ? "block" : "none",
+            transition: "all 0.3s",
           }}
           className="absolute top-[100%] left-[50%] translate-x-[-50%] h-60  bg-red-200"
         >
